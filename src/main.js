@@ -24,21 +24,19 @@
   var myTable = document.getElementById("myTable")
 
   function createDownloadLink(anchorObject, str, fileName, type){
-    // if(window.navigator.msSaveOrOpenBlob) {
-    //   var fileData = str;
-    //   blobObject = new Blob(fileData);
-    //   anchorObject.addEventListener("click", function(){
-    //     window.navigator.msSaveOrOpenBlob(blobObject, fileName);
-    //   });
-    // } else {
-      // var url = "data:" + type + ";charset=utf-8," + encodeURIComponent(str);
-      // console.log(url);
+    if (window.navigator.msSaveOrOpenBlob) {
+      var fileData = str;
+      blobObject = new Blob(fileData);
+      anchorObject.addEventListener("click", function() {
+        window.navigator.msSaveOrOpenBlob(blobObject, fileName);
+      });
+    } else {
       var fileData = str;
       blobObject = new Blob([fileData], { "type": type });
       url = URL.createObjectURL(blobObject);
       anchorObject.download = fileName;
       anchorObject.href = url;
-    // }
+    }
   }
 
   var tableData = simpleTableScrape(document.getElementById("myTable"));
