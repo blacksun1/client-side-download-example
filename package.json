@@ -1,0 +1,16 @@
+{
+  "name": "test-browserify",
+  "version": "0.0.0",
+  "description": "Simple test of [browserify](http://browserify.org/).Simple test of [browserify](http://browserify.org/)",
+  "main": "files/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify src/main.js -o files/bundle.js"
+  },
+  "author": "blacksun1 <blacksun1@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "csv-stringify": "^1.0.2",
+    "uniq": "^1.0.1"
+  }
+}
