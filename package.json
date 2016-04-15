@@ -1,11 +1,13 @@
 {
-  "name": "test-browserify",
+  "name": "client-side-download-example",
   "version": "0.0.0",
-  "description": "Simple test of [browserify](http://browserify.org/).Simple test of [browserify](http://browserify.org/)",
-  "main": "files/index.js",
+  "description": "Example of export from a table using only the client",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify src/main.js -o files/bundle.js"
+    "build": "browserify src/main.js -o files/bundle.js",
+    "start": "node .",
+    "prestart": "npm run build"
   },
   "author": "blacksun1 <blacksun1@users.noreply.github.com>",
   "license": "MIT",

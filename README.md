@@ -1,6 +1,6 @@
-# test-browserify
+# client-side-download-example
 
-Simple test of [browserify](http://browserify.org/) to and using it to download CSV from the contents of a table.
+Example of export from a table using only the client
 
 ## To Build
 
@@ -10,16 +10,10 @@ First install browsify
 npm install -g browsify
 ```
 
-then build the application
+then build the application and run the included webserver
 
 ```bash
-npm run build
-```
-
-then run the included webserver
-
-```bash
-node .
+npm start
 ```
 
 then use your browser to browse to <http://localhost:1337/>.
