@@ -7,7 +7,7 @@ Example of export from a table using only the client
 First install browsify
 
 ```bash
-npm install -g browsify
+npm install -g browserify
 ```
 
 then build the application and run the included webserver
